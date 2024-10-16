@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>String Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <h1 class="text-center">String Calculator</h1>
+  </head>
+  <body class="flex justify-center items-start h-[100vh]">
+    <section class="bg-white p-8 rounded-lg shadow-lg max-w-[600px] w-full mt-[20vh]">
+      <h1 class="text-2xl font-bold mb-4 text-center">String Calculator</h1>
+
+      <div class="mb-4">
+        <label for="inputString" class="block text-gray-700 font-semibold mb-2"
+          >Enter numbers (comma-separated or with custom delimiters):</label
+        >
+        <input
+          type="text"
+          id="inputString"
+          placeholder="e.g. 1,2,3 or //;\n1;2"
+          class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <button
+        class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+      >
+        Calculate
+      </button>
+    </section>
+
     <script src="/script.js"></script>
-</body>
+  </body>
 </html>
