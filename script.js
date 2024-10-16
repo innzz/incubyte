@@ -22,3 +22,21 @@ class StringCalculator {
     return numArray.reduce((sum, num) => sum + num, 0);
   }
 }
+
+function calculate() {
+  const inputString = document.getElementById("inputString").value;
+  const calculator = new StringCalculator();
+  const resultDiv = document.getElementById("result");
+  const errorDiv = document.getElementById("error");
+
+  // Clear previous results
+  resultDiv.innerHTML = "";
+  errorDiv.innerHTML = "";
+
+  try {
+    const result = calculator.add(inputString);
+    resultDiv.innerHTML = `Result: ${result}`;
+  } catch (error) {
+    errorDiv.innerHTML = error.message;
+  }
+}
