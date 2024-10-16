@@ -1,4 +1,5 @@
-import StringCalculator from "./script";
+import { StringCalculator } from "./StringCalculator";
+
 
 describe("StringCalculator", () => {
   let calculator;
